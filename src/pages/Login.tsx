@@ -14,7 +14,7 @@ function Login() {
     <div className='w-full'>
       <Row>
         <Col span={24}>
-          <h2 className='text-xl font-normal text-center'>SIGN IN</h2>
+          <h2 className='text-xl font-normal text-center tracking-wide'>SIGN IN</h2>
         </Col>
       </Row>
 
