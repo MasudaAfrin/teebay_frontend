@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { TfiMoreAlt } from 'react-icons/tfi'
+import { TfiMoreAlt } from 'react-icons/tfi';
 
 function BaseLayout() {
     return (
