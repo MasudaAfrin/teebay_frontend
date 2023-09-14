@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { TfiMoreAlt } from 'react-icons/tfi'
+import { TfiMoreAlt } from 'react-icons/tfi';
 
 function BaseLayout() {
     return (
@@ -10,7 +10,7 @@ function BaseLayout() {
                 </div>
             </nav>
 
-            <main className='container mx-auto h-4/5 flex items-center'>
+            <main className='container mx-auto h-4/5 flex items-center border-2 border-red-500'>
                 <Outlet />
             </main>
 

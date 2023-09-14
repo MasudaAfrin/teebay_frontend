@@ -1,14 +1,36 @@
 import { Row, Col } from 'antd';
 import { useForm } from 'react-hook-form';
+import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
+import { postData } from '../requests/httpServices';
+import { toast } from 'react-toastify';
 
 function Login() {
-  const { register,
+  const navigate = useNavigate();
+  const { register, handleSubmit,
     formState: { errors } } = useForm({
       defaultValues: {
         email: '',
         password: '',
       },
     });
+
+    const submitForm = async (data:any) => {
+      const params = {
+        email: data.email,
+        password: data.password,
+      }
+      const response = await postData('api/v1/login', params);
+      if (response.status === 200){
+        console.log('response', response?.data);
+        Cookies.set('token', response?.data?.data?.token);
+        Cookies.set('name', response?.data?.data?.name);
+        navigate('/', { replace: true });
+      } else {
+        console.log(response?.data?.message);
+        toast.error(response?.data?.message);
+      }
+    }
 
   return (
     <div className='w-full'>
@@ -18,9 +40,9 @@ function Login() {
         </Col>
       </Row>
 
-      <Row className='w-1/3 mx-auto border-8 border-[#c5ced6] px-12 py-24 mt-6'>
+      <Row className='w-1/3 mx-auto border-4 border-[#c5ced6] px-6 py-6 mt-2 2xl:px-12 2xl:py-24 2xl:mt-6'>
         <Row justify={'center'} className='w-full'>
-          <form>
+          <form onSubmit={handleSubmit(submitForm)}>
             <Row >
               <Col span={24}>
                 <input {...register("email", { required: 'This is required' })}
@@ -49,8 +71,8 @@ function Login() {
                 <input
                   type='submit'
                   value='LOGIN'
-                  className="w-full bg-[#8306fa] text-white rounded border-2 border-[#8306fa] py-4
-                  text-xl font-normal hover:bg-[#9eadba] hover:border-[#9eadba] hover:cursor-pointer"/>
+                  className="w-full bg-[#6558F5] text-white rounded border-2 border-[#6558F5] lg:py-2 2xl:py-4
+                  lg:text-lg 2xl:text-xl font-normal hover:bg-[#9eadba] hover:border-[#9eadba] hover:cursor-pointer"/>
               </Col>
             </Row>
           </form>
