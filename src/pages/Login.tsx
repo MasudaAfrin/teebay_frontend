@@ -18,7 +18,7 @@ function Login() {
         </Col>
       </Row>
 
-      <Row className='w-1/3 mx-auto border-8 border-[#c5ced6] px-12 py-24 mt-6'>
+      <Row className='w-1/3 mx-auto border-4 border-[#c5ced6] px-6 py-6 mt-2 2xl:px-12 2xl:py-24 2xl:mt-6'>
         <Row justify={'center'} className='w-full'>
           <form>
             <Row >
@@ -49,8 +49,8 @@ function Login() {
                 <input
                   type='submit'
                   value='LOGIN'
-                  className="w-full bg-[#8306fa] text-white rounded border-2 border-[#8306fa] py-4
-                  text-xl font-normal hover:bg-[#9eadba] hover:border-[#9eadba] hover:cursor-pointer"/>
+                  className="w-full bg-[#6558F5] text-white rounded border-2 border-[#6558F5] lg:py-2 2xl:py-4
+                  lg:text-lg 2xl:text-xl font-normal hover:bg-[#9eadba] hover:border-[#9eadba] hover:cursor-pointer"/>
               </Col>
             </Row>
           </form>
