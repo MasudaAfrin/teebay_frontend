@@ -50,7 +50,7 @@ function Login() {
                   placeholder='Email'
                   className="w-full p-3 border-2 border-[#c5ced6] rounded hover:border-2 hover:border-[#2c88d9] focus:outline-sky-500" />
                 <p className='text-red-500'>
-                  {errors?.password?.message}
+                  {errors?.email?.message}
                 </p>
               </Col>
 

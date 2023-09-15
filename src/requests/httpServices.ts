@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-export const postData = async (url:string, data:any) => {
+export const postData = async (url:string, data?:any) => {
     try {
         const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/${url}`, data, {
             headers: {
