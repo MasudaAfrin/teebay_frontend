@@ -14,7 +14,7 @@ function BaseLayout() {
                 <Outlet />
             </main>
 
-            <footer className='bg-[#9eadba] sahdow py-2 mt-0 lg:mt-6 2xl:mt-24 '>
+            <footer className='bg-[#9eadba] sahdow py-2 mt-0 2xl:mt-24 '>
                 <p className='px-3 italic font-medium text-neutral-50'>teebay</p>
             </footer>
         </div>
