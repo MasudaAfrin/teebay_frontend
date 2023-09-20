@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getAllData } from '../../requests/httpServices';
 import { Card, Pagination } from "antd";
+import { Link } from 'react-router-dom';
 import ProductCard from './components/ProductCard';
 
 const defaultPagination = {
@@ -88,6 +89,15 @@ function List() {
                             />
                         )
                     }
+                </div>
+
+                <div className='w-full flex justify-end mt-4'>
+                    <Link to='/products/create' 
+                    className='p-2 rounded border-2 border-[#6558F5] 
+                    bg-[#6558F5] text-white hover:bg-[#9eadba] 
+                    hover:border-[#9eadba] hover:cursor-pointer hover:text-black'>
+                        Add Product
+                    </Link>
                 </div>
             </div>
         </div>

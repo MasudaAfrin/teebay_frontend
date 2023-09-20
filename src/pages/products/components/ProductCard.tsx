@@ -3,6 +3,7 @@ import { Card, Modal, Button } from 'antd';
 import { MdDelete } from 'react-icons/md';
 import { deleteData } from '../../../requests/httpServices';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 interface IProductProps {
   id: string | number;
@@ -52,10 +53,10 @@ const ProductCard: FC<productProps> = ({
   };
  
   return (
-    <div className='w-full mb-4 cursor-pointer'>
-      <Card style={{ width: '100%' }}>
+    <div className='w-full mb-4'>
+      <Card className='border-4' style={{ width: '100%' }}>
         <div className='w-full flex justify-between'>
-          <h2>{title}</h2>
+          <Link to={`/products/edit/${id}`} className='underline decoration-indigo-500'>{title}</Link>
           <div className='text-red-500 cursor-auto' onClick={showModal}><MdDelete size={'24'}/></div>
         </div>
         <p>Categories: {product_categories.toString().replace(',', ', ')}</p>

@@ -41,7 +41,7 @@ export const getDetails = async (url:string, id?:number|string) => {
     }
 };
 
-export const updateData = async (url:string, id: number, params:any) => {
+export const updateData = async (url:string, params:any, id?: number|string) => {
     try {
         const response = await axios.put(`${process.env.REACT_APP_BASE_URL}/${url}/${id}`, params, {
             headers: {
