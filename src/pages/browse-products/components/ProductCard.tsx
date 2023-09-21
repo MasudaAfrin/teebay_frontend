@@ -16,7 +16,7 @@ interface IProductProps {
 interface productProps {
     product: IProductProps;
     productOption?: string;
-    price_option?: string | any
+    source?: string | any;
 }
 
 const ProductCard: FC<productProps> = ({
