@@ -91,7 +91,13 @@ function List() {
                     }
                 </div>
 
-                <div className='w-full flex justify-end mt-4'>
+                <div className='w-full flex justify-between mt-4'>
+                <Link to='/products/browse' 
+                    className='p-2 rounded border-2 border-[#6558F5] 
+                    bg-[#6558F5] text-white hover:bg-[#9eadba] 
+                    hover:border-[#9eadba] hover:cursor-pointer hover:text-black'>
+                        Browse Products
+                    </Link>
                     <Link to='/products/create' 
                     className='p-2 rounded border-2 border-[#6558F5] 
                     bg-[#6558F5] text-white hover:bg-[#9eadba] 
