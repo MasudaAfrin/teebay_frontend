@@ -8,6 +8,7 @@ import ProductList from "../pages/products/List";
 import ProductEdit from "../pages/products/Edit";
 import ProductBrowse from "../pages/browse-products/List";
 import MyProducts from "../pages/browse-products/MyProducts";
+import ProductDetails from "../pages/browse-products/Details";
 
 const RouteList = () => {
   return (
@@ -33,6 +34,10 @@ const RouteList = () => {
           <Route
             path="/products/my-products"
             element={<MyProducts />}
+          />
+          <Route
+            path="/products/details/:id"
+            element={<ProductDetails />}
           />
         </Route>
         <Route

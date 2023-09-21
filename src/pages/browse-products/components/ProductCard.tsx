@@ -39,7 +39,7 @@ const ProductCard: FC<productProps> = ({
                     )
                 }
                 <p>{description} 
-                <span className='ml-2'><Link to={`/products/edit/${id}`}>More Details</Link>
+                <span className='ml-2'><Link to={`/products/details/${id}`}>More Details</Link>
                 </span></p>
                 <p>Date Posted: {created_at}</p>
                 {
