@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Card } from 'antd';
+import { Card, Button } from 'antd';
 import { Link } from 'react-router-dom';
 
 interface IProductProps {
@@ -21,7 +21,8 @@ interface productProps {
 
 const ProductCard: FC<productProps> = ({
     product,
-    productOption
+    productOption,
+    source
 }) => {
     const { id, title, description, product_categories, price, rental_price, price_option, created_at } = product;
 
@@ -41,6 +42,13 @@ const ProductCard: FC<productProps> = ({
                 <span className='ml-2'><Link to={`/products/edit/${id}`}>More Details</Link>
                 </span></p>
                 <p>Date Posted: {created_at}</p>
+                {
+                    source && productOption && (
+                        <div>
+                            <Button>{productOption === 'buy' ? 'Buy' : 'Rent'}</Button>
+                        </div>
+                    )
+                }
             </Card>
         </div>
     )
