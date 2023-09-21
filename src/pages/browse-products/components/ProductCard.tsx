@@ -38,9 +38,12 @@ const ProductCard: FC<productProps> = ({
                         <p>Price: ${price} | Rent: ${rental_price} {price_option.replace('_', ' ').toUpperCase()}</p>
                     )
                 }
-                <p>{description} 
-                <span className='ml-2'><Link to={`/products/details/${id}`} state={{ productOption: productOption || 'buy' }}>More Details</Link>
-                </span></p>
+                <p className='truncate'>{description} </p>
+                <Link to={`/products/details/${id}`}
+                    state={{ productOption: productOption || 'buy' }}
+                    className='text-sky-500'>
+                    More Details
+                </Link>
                 <p>Date Posted: {created_at}</p>
                 {/* {
                     source && productOption && (

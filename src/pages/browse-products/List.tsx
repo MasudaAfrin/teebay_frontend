@@ -6,7 +6,7 @@ import ProductCard from './components/ProductCard';
 
 const defaultPagination = {
     page: 1,
-    per_page: 5
+    per_page: 1
 }
 
 const defaultData = {
@@ -268,7 +268,7 @@ function List() {
                     <div className='flex justify-center'>
                         {
                             data.total && data.total > data.products.length && (
-                                <Button onClick={() => setPagination({ ...pagination, per_page: pagination.per_page + 5 })}>
+                                <Button onClick={() => setPagination({ ...pagination, per_page: pagination.per_page + 1 })}>
                                     Learn More
                                 </Button>
                             )

@@ -61,7 +61,7 @@ const ProductCard: FC<productProps> = ({
         </div>
         <p>Categories: {product_categories.toString().replace(',', ', ')}</p>
         <p>Price: ${price} | Rent: ${rental_price} {price_option.replace('_', ' ').toUpperCase()}</p>
-        <p>{description}</p>
+        <p className='truncate'>{description}</p>
         <p>Date Posted: {created_at}</p>
       </Card>
 
