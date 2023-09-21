@@ -1,7 +1,7 @@
 import { Row, Col } from 'antd';
 import { useForm } from 'react-hook-form';
 import Cookies from 'js-cookie';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { postData } from '../requests/httpServices';
 import { toast } from 'react-toastify';
 
@@ -81,7 +81,7 @@ function Login() {
         <Row className='w-full mt-8'>
           <Col span={24}>
             <p className='text-lg text-center font-medium tracking-wide'>
-              Don't have an account? <span className='text-[#2c88d9]'>SignUp</span>
+              Don't have an account? <Link to='/register' className='text-[#2c88d9]'>SignUp</Link>
             </p>
           </Col>
         </Row>
