@@ -1,6 +1,6 @@
 import { Row, Col } from 'antd';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { postData } from '../requests/httpServices';
 import { toast } from 'react-toastify';
 
@@ -147,7 +147,7 @@ function Registration() {
         <Row className='w-full mt-8'>
           <Col span={24}>
             <p className='text-lg text-center font-medium tracking-wide'>
-              Already have an account? <span className='text-[#2c88d9]'>Sign In</span>
+              Already have an account? <Link to='/login' className='text-[#2c88d9]'>Sign In</Link>
             </p>
           </Col>
         </Row>

@@ -7,6 +7,7 @@ import ProductCreate from "../pages/products/Create";
 import ProductList from "../pages/products/List";
 import ProductEdit from "../pages/products/Edit";
 import ProductBrowse from "../pages/browse-products/List";
+import MyProducts from "../pages/browse-products/MyProducts";
 
 const RouteList = () => {
   return (
@@ -28,6 +29,10 @@ const RouteList = () => {
           <Route
             path="/products/browse"
             element={<ProductBrowse />}
+          />
+          <Route
+            path="/products/my-products"
+            element={<MyProducts />}
           />
         </Route>
         <Route
