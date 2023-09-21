@@ -10,7 +10,7 @@ function BaseLayout() {
                 </div>
             </nav>
 
-            <main className='container mx-auto h-auto 2xl:h-4/5 flex items-center'>
+            <main className='container mx-auto h-full 2xl:h-4/5 flex items-center'>
                 <Outlet />
             </main>
 
